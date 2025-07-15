@@ -101,7 +101,7 @@ int GgApp::main(int argc, const char* const* argv)
 
     // 鏡像用のシェーダの選択
     mirror.use(mp, mv * mr * mm * window.getRotationMatrix(), lightBuffer);
-    lightBuffer.loadPosition((mv * mr * light.position).data());
+    lightBuffer.loadPosition((mv * light.position).data());
 
     // 鏡像の描画
     materialBuffer.select();
